@@ -1,0 +1,58 @@
+﻿@model SliderDetail
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            <h2>Image detail</h2>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Header
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Signimage
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        @Model.Header
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                    <td>
+                        <img style="width: 150px !important; height: 150px !important" src="~/img/@Model.SignImage" alt="slider" />
+                    </td>
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+    <a asp-controller="SliderText" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>
+
+
+

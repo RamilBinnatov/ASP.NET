@@ -1,0 +1,60 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            Employee detail
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Fullname
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                    <th>
+                       IsActive
+                    </th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                    <tr>
+                        <td>
+                            @Model.FullName
+                        </td>
+                        <td>
+                            @Model.Age
+                        </td>
+                        <td>
+                            @Model.Position
+                        </td>
+                        <td>
+                         @Model.IsActive
+                        </td>
+                       
+                    </tr>
+                
+
+
+            </tbody>
+        </table>
+
+     
+    </div>
+    <a asp-controller="Employee" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>
+

@@ -1,0 +1,54 @@
+﻿@model Employee
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <span class="text-danger">@ViewBag.Message</span>
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Employe
+                        </p>
+                        <form asp-controller="Employee" asp-action="Create" class="forms-sample" method="post">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">FulName</label>
+                                <input maxlength="" minlength="" type="text" class="form-control" asp-for="FullName">
+                                <span class="text-danger my-1" asp-validation-for="FullName"></span>
+
+                                <label class="my-4" for="exampleInputUsername1">Age</label>
+                                <input maxlength="" minlength="" type="text" class="form-control" asp-for="Age">
+                                <span class="text-danger my-1" asp-validation-for="Age"></span>
+
+                                <label class="my-4" for="exampleInputUsername1">Position</label>
+                                <input maxlength="" minlength="" type="text" class="form-control" asp-for="Position">
+                                <span class="text-danger my-1" asp-validation-for="Position"></span>
+
+                               
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Create</button>
+                            <a asp-controller="Employee" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+
+
+}
+
+
+
+
+

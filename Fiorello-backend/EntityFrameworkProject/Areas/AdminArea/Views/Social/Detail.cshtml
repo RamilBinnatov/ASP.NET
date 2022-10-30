@@ -1,0 +1,20 @@
+﻿@model Social
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            Social detail
+        </div>
+        <div class="card-body">
+            <p class="card-text">@Model.Name</p>
+        </div>
+        <div class="card-body">
+            <p class="card-text">@Model.Url</p>
+        </div>
+    </div>
+    <a asp-controller="Social" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>

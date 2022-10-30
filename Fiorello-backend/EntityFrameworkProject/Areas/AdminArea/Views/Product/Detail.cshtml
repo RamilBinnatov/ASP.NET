@@ -1,0 +1,66 @@
+﻿@model ProductDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+
+<div class="container my-5">
+    <div class="card">
+        <div class="card-header">
+            Product detail
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        MainImage
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Category
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <td>
+                        <img src="~/img/@Model.MainImage" alt="Alternate Text" />
+                    </td>
+                    <td>
+                        @Model.Title
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                    <td>
+                        @Html.Raw(Model.Price.ToString("0.#####"))$
+                    </td>
+                    <td>
+                        @Model.CategoryName
+                    </td>
+
+                </tr>
+
+
+
+            </tbody>
+        </table>
+
+
+    </div>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-primary my-3">Back</a>
+</div>
+

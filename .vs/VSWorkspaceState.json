@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Fiorello-backend",
+    "\\Fiorello-backend\\EntityFrameworkProject",
+    "\\Fiorello-backend\\EntityFrameworkProject\\Areas",
+    "\\Fiorello-backend\\EntityFrameworkProject\\Areas\\AdminArea",
+    "\\Fiorello-backend\\EntityFrameworkProject\\Areas\\AdminArea\\Controllers",
+    "\\Fiorello-backend\\EntityFrameworkProject\\Areas\\AdminArea\\Views",
+    "\\Fiorello-backend\\EntityFrameworkProject\\ViewModels",
+    "\\Fiorello-backend\\EntityFrameworkProject\\ViewModels\\ProductViewModels"
+  ],
+  "SelectedNode": "\\Fiorello-backend\\EntityFrameworkProject\\Areas\\AdminArea\\Controllers\\ProductController.cs",
+  "PreviewInSolutionExplorer": false
+}

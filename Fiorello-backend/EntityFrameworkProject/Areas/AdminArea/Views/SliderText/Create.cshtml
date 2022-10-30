@@ -1,0 +1,66 @@
+﻿@model SliderDetail
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <span class="text-danger">@ViewBag.Message</span>
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-description">
+                            Slider Details
+                        </p>
+                        <form asp-controller="SliderText" asp-action="Create" class="forms-sample" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="exampleInputUsername1">Header</label>
+                                <textarea class="form-control rounded-0" id="header-area" rows="3" asp-for="Header"></textarea>
+                                <span class="text-danger my-1" asp-validation-for="Header"></span>
+
+                                <label class="my-4" for="exampleInputUsername1">Description</label>
+                                <textarea class="form-control rounded-0" id="description-area" rows="3" asp-for="Description"></textarea>
+                                <span class="text-danger my-1" asp-validation-for="Description"></span>
+
+                                <label class="my-4" for="exampleInputUsername1">Significant</label>
+                                <input class="form-control" asp-for="Photo">
+                                <span class="text-danger" asp-validation-for="Photo"></span>
+
+
+
+
+                            </div>
+                            <button type="submit" class="btn btn-primary mr-2">Create</button>
+                            <a asp-controller="SliderText" asp-action="Index" class="btn btn-light">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationPartial" />
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+
+    <script>
+        CKEDITOR.replace("header-area")
+    </script>
+
+    <script>
+        CKEDITOR.replace("description-area")
+    </script>
+
+}
+
+
+
+
+
+
